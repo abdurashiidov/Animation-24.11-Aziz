@@ -1,0 +1,36 @@
+html {
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: red;
+    display: inline-block;
+    font-size: 5vw;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.aliens>* {
+    animation: turn 10s ease-in;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: 3vw;
+    text-shadow: 0 0 .5rem #def;
+    text-transform: uppercase;
+    transform: scaleY(4);
+}
+
+@keyframes turn {
+    0% {
+        text-shadow: 0 0 0 #def;
+        transform: scaleY(4) rotateY(90deg);
+    }
+
+    100% {
+        text-shadow: 0 0 .5rem #def;
+        transform: scaleY(4) rotateY(0);
+    }
+}
